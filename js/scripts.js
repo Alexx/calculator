@@ -29,3 +29,13 @@ var divide = function(number1,number2) {
 //var number2 = parseInt(prompt("Enter another number: "));
 var result = divide(number1,number2);
 alert("The quotient of " + number1 + " / " + number2 + " = " + result + ".");
+
+var bodyMassIndex = function(weight, height) {
+	return weight / (height * height) * 703;
+};
+
+var weight = parseInt(prompt("Your weight in lbs: "));
+var height = parseInt(prompt("Your height in inches: "));
+var result = bodyMassIndex(weight, height).toFixed(2);
+
+alert("Your BMI is " + result);
