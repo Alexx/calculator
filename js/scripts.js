@@ -18,34 +18,23 @@ var divide = function(number1, number2) {
 
 //User interface logic
 
-$(function() {
+$(document).ready(function() {
+  $("form#calculator").submit(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    var operator = $("input:radio[name=operator]:checked").val();
+    var result;
 
-	$("#add").click(function(event) {
-		event.preventDefault();
-		var number1 = parseInt($("#num1").val());
-		var number2 = parseInt($("#num2").val());
-		var result = (add(number1, number2));
+		if(operator === "add") {
+			result = add(number1, number2);
+		} else if(operator === "subtract") {
+			result = subtract(number1, number2);
+		} else if(operator === "multiply") {
+			result = multiply(number1, number2);
+		} else if(operator === "divide") {
+			result = divide(number1, number2);
+		}
 		$("#output").text(result);
-	});
-	$("#subtract").click(function(event) {
-		event.preventDefault();
-		var number1 = parseInt($("#num1").val());
-		var number2 = parseInt($("#num2").val());
-		var result = (subtract(number1, number2));
-		$("#output").text(result);
-	});
-	$("#multiply").click(function(event) {
-		event.preventDefault();
-		var number1 = parseInt($("#num1").val());
-		var number2 = parseInt($("#num2").val());
-		var result = (multiply(number1, number2));
-		$("#output").text(result);
-	});
-	$("#divide").click(function(event) {
-		event.preventDefault();
-		var number1 = parseInt($("#num1").val());
-		var number2 = parseInt($("#num2").val());
-		var result = (divide(number1, number2));
-		$("#output").text(result);
-	});
+  });
 });

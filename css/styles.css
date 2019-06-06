@@ -1,0 +1,29 @@
+.container {
+  width: 350px;
+  background-color: grey;
+  border-radius: 5%;
+}
+
+h1, label, input {
+  color: #FFF;
+}
+
+h1 {
+  text-align: center;
+}
+
+.calc-output {
+  background-color: #FFF;
+}
+
+.radio {
+  display: inline;
+}
+
+button {
+  margin: 15px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

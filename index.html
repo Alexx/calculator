@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Calculator</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Calculator</h1>
-    <form>
-      <div class="form-group">
-        <label for="num1">First number:</label>
-        <input id="num1" class="form-control" type="text">
-      </div>
-
-      <div class="form-group">
-        <label for="num2">Second number:</label>
-        <input id="num2" class="form-control" type="text">
-      </div>
-      <button id="add" type="submit" class="btn btn-warning">Add!</button>
-      <button id="subtract" type="submit" class="btn btn-warning">Subtract!</button>
-      <button id="multiply" type="submit" class="btn btn-warning">Multiply!</button>
-      <button id="divide" type="submit" class="btn btn-warning">Divide!</button>
-    </form>
-
-    <div id="output">
-
+  <head>
+    <title>Calculator</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculator</h1>
+      <h2 class="calc-output" type="text" id="output">Output</h2>
+      <form id="calculator">
+        <div class="form-group">
+          <label for="input1">1st number:</label>
+          <input id="input1" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="input2">2nd number:</label>
+          <input id="input2" class="form-control" type="text">
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="operator" value="add" checked>
+            add
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="operator" value="subtract">
+            subtract
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="operator" value="multiply">
+            multiply
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="operator" value="divide">
+            divide
+          </label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Go!</button>
+      </form>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
